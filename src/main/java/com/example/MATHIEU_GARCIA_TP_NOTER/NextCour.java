@@ -148,13 +148,7 @@ public class NextCour extends AppCompatActivity {
                     finish();
                 }
             });
-
-            refresh.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    new FetchTask().execute("https://accueil-ent2.univ-avignon.fr/edt/exportAgendaUrl?codeDip=2-L3IN");
-                }
-            });
-
+        
             if(isConnected()) {
                 new FetchTask().execute("https://accueil-ent2.univ-avignon.fr/edt/exportAgendaUrl?codeDip=2-L3IN");
             }
